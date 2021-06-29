@@ -3,10 +3,6 @@ import '../Style.scss';
 
 import axios from 'axios'
 
-//pages 
-
-import ListDishes from './ListDishes'
-
 
 const CategoryList = () => {
 
@@ -46,7 +42,7 @@ const CategoryList = () => {
     }
 
     return(
-        <>
+        <div class="container">
             <div className="categoryListing">
             {categories.map((category,k) => {
                     return(
@@ -55,8 +51,7 @@ const CategoryList = () => {
                 })
             }
             </div>
-            <ListDishes />
-        </>
+        </div>
     )
 }
 

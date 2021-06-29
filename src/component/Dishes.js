@@ -4,12 +4,14 @@ import React from 'react'
 
 import Header from './Header'
 import CategoryList from './CategoryList'
+import ListDishes from './ListDishes'
 
 const Dishes = () => {
     return(
         <>
             <Header />
             <CategoryList />
+            <ListDishes />
         </>
     )
 }
