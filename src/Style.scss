@@ -1,0 +1,158 @@
+$fullwidth : 100%;
+$containerWidth : 80%;
+
+ 
+h2{
+    margin : 0px;              
+}
+
+.App{
+    width: $fullwidth;
+
+    //header part style
+
+    .headerParent{
+        width : $fullwidth;
+        height : 70px;
+        background-color : #fff;
+
+        .headerContainer{
+            width : $containerWidth;
+            margin : 0px auto;
+            display : flex;
+
+            .headerColm1 {
+                width : 60%;
+                height : 100%;
+                display :flex;
+                margin : 20px 0px;
+
+                .backicon{
+                    margin : 0px 20px;
+                    font-size : 30px; 
+                }
+               
+                h2{
+                    font-size : 24px;
+                }
+            }
+
+            .headerColm2 {
+                width : 40%;
+                height : 100%;
+                display :flex;
+                margin : 20px 0px;
+               
+                p{
+                    margin : 4px;
+                    margin-left: auto;
+                    font-size : 14px;
+                }
+            }
+        }
+    }
+
+    //Category style design
+
+    .categoryListing{
+        height : auto;
+        overflow: auto;
+        white-space: nowrap;
+        display: flex;
+        width : 100%;
+
+        p{
+            text-transform:capitalize;
+            padding : 10px 20px 10px 20px;
+            margin-bottom : 4px;
+            border-bottom: 3px solid rgb(204, 195, 195);
+            cursor: pointer;
+        }
+
+        .activeStyle{
+            color : red;
+            border-bottom : 3px solid red;
+        }
+    }
+
+    //card Design
+
+    .cardDisp{
+        display : flex;
+        padding: 0px 0px;
+        margin : 5px 0px;
+        height: 100%;
+        background-color: lightblue;
+        border-bottom: 1px solid rgb(204, 195, 195);
+        height: 250px;
+
+        .cardColm1{
+            width : 5%;
+            height : 100%;
+        }
+        .cardColm2{
+            width : 70%;
+            height : 100%;
+
+            h5{
+                margin :10px 3px;
+                font-size : 15px;
+
+            }
+        }
+        .cardColm3{
+            width : 25%;
+            height : 100%;
+
+            .cardImg{
+                width: 90%;
+                margin-top: 10px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+//media 780px
+
+@media screen and (max-width: 780px){
+    .App{
+        .headerParent{
+
+            height : 60px;
+
+            .headerContainer{
+                width: $fullwidth;
+
+                .headerColm1 {
+                   
+                    .backicon{
+                        margin : 0px 10px;
+                        font-size : 25px; 
+                    }
+
+                    h2{
+                        font-size : 18px;
+                        margin-top: 2px;
+                    }
+                }
+
+                .headerColm2 {
+                    width : 40%;
+                    height : 100%;
+                    display :flex;
+                    margin : 20px 0px;
+                   
+                    p{
+                        margin : 4px;
+                        margin-left: auto;
+                        font-size : 12px;
+                    }
+                }
+            }
+        }
+        .padnone{
+            padding: 0px;
+        }
+    }
+}
