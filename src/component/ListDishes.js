@@ -108,7 +108,7 @@ const ListDishes = () => {
 
                                     <div className="count">
                                         <div className="buttonView">
-                                            <div className="btnMinus" onClick={() => { removeQty(dish.dish_id) }}>
+                                            <div className="btnMinus" onClick={() => { return (count>0) ? removeQty(dish.dish_id) : null }}>
                                                 <AiOutlineMinus  style={{ fontSize : '20px', margin : '5px'}} />
                                             </div>
                                             <div className="btnCount">

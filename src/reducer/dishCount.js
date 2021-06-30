@@ -11,6 +11,7 @@ const DishCount = (count = 0, action ) => {
         //decrement total
 
         case 'REMOVE_CARD':
+            
             if(count > 0){
                 return count-1;
             }
