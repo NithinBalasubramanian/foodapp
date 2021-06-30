@@ -34,7 +34,7 @@ const CategoryList = () => {
         await axios.get('https://run.mocky.io/v3/a67edc87-49c7-4822-9cb4-e2ef94cb3099')
         .then((res) => {
             setCategories(res.data[0].table_menu_list);
-            console.log(res.data[0].table_menu_list);
+            //console.log(res.data[0].table_menu_list);
         })
         .catch((error) => {
             console.log(error);
@@ -42,7 +42,7 @@ const CategoryList = () => {
     }
 
     return(
-        <div class="container">
+        <div className="container">
             <div className="categoryListing">
             {categories.map((category,k) => {
                     return(

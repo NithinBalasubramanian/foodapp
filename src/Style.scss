@@ -1,6 +1,11 @@
 $fullwidth : 100%;
 $containerWidth : 80%;
 
+//button color 
+
+$buttonColor : #20d459;
+$primaryColor : #e31b4a;
+$descColor : #858585;
  
 h2{
     margin : 0px;              
@@ -34,6 +39,7 @@ h2{
                
                 h2{
                     font-size : 24px;
+                    font-weight: 800;
                 }
             }
 
@@ -41,12 +47,27 @@ h2{
                 width : 40%;
                 height : 100%;
                 display :flex;
-                margin : 20px 0px;
+                margin : 20px 5px 20px 0px;
                
                 p{
                     margin : 4px;
                     margin-left: auto;
                     font-size : 14px;
+                    color : $descColor;
+                    font-weight: 400;
+                }
+
+                .countDisp{
+                    font-size:8px;
+                    background-color:$primaryColor;
+                    color : #fff;
+                    padding : 1px;
+                    height : 16px;
+                    width : 16px;
+                    border-radius : 8px;
+                    margin-left : -50px;
+                    margin-right : 10px;
+                    text-align:center;
                 }
             }
         }
@@ -67,11 +88,14 @@ h2{
             margin-bottom : 4px;
             border-bottom: 3px solid rgb(204, 195, 195);
             cursor: pointer;
+            color : $descColor;
+            font-size : 14px;
+            font-weight: 700;
         }
 
         .activeStyle{
-            color : red;
-            border-bottom : 3px solid red;
+            color : $primaryColor;
+            border-bottom : 3px solid $primaryColor;
         }
     }
 
@@ -100,7 +124,7 @@ h2{
             h5{
                 margin :10px 3px;
                 font-size : 15px;
-
+                font-weight: 700;
             }
 
             .priceDisp{
@@ -119,6 +143,7 @@ h2{
 
             p{
                 letter-spacing: 1px;
+                color : $descColor;
             }
 
             .count{
@@ -132,7 +157,7 @@ h2{
                     .btnAdd{
                         width : 30%;
                         text-align: left;
-                        background-color: red;
+                        background-color: $buttonColor;
                         border-top-right-radius: 25px;
                         border-bottom-right-radius: 25px;
                     }
@@ -140,12 +165,12 @@ h2{
                         width : 40%;
                         text-align: center;
                         padding : 5px;
-                        background-color: red;
+                        background-color: $buttonColor;
                     }
                     .btnMinus{
                         width : 30%;
                         text-align: right;
-                        background-color: red;
+                        background-color: $buttonColor;
                         border-top-left-radius: 25px;
                         border-bottom-left-radius: 25px;
                     }
@@ -155,7 +180,7 @@ h2{
             .customize{
                 margin : 10px;
                 font-size: 14px;
-                color: red;
+                color: $primaryColor;
             }
         }
         .cardColm3{
@@ -205,6 +230,19 @@ h2{
                         margin : 4px;
                         margin-left: auto;
                         font-size : 12px;
+                    }
+
+                    .countDisp{
+                        font-size:8px;
+                        background-color:$primaryColor;
+                        color : #fff;
+                        padding : 1px;
+                        height : 16px;
+                        width : 16px;
+                        border-radius : 8px;
+                        margin-left : -50px;
+                        margin-right : 10px;
+                        text-align:center;
                     }
                 }
             }

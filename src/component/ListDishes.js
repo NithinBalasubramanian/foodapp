@@ -3,8 +3,9 @@ import '../Style.scss';
 
 import axios from 'axios'
 
+//redux
 import { useSelector , useDispatch } from 'react-redux'
-import { DishesListing , Add_Dishes_qty } from '../action';
+import { DishesListing , Add_Dishes_qty , Remove_Dishes_qty , CartCount , CartRemoveCount } from '../action';
 
 //icons
 
@@ -47,7 +48,23 @@ const ListDishes = () => {
         }
 
         Dispatch(Add_Dishes_qty(qtyIncreament));
+        Dispatch(CartCount());
+
     }
+
+    //decreament
+
+    const removeQty = (id) => {
+        let qtyDecreament = {
+            'id' : id,
+            'qty' : 1
+        }
+
+        Dispatch(Remove_Dishes_qty(qtyDecreament));
+        Dispatch(CartRemoveCount());
+    }
+
+    //collective of dishes from redux state
 
     let qtyData = useSelector( state => state.DishQty );
 
@@ -58,7 +75,15 @@ const ListDishes = () => {
             <div className="row">
                 {data.map((dish,d_k) => {
                     let count = 0;
-    
+                    let qty = qtyData.filter(({id}) => id === dish.dish_id );
+                    if(qty.length > 0){
+                        qty.map(quantity => {
+                            count = quantity.qty;
+                        })
+                    }else{
+                        count = 0;
+                    }
+
                     return(
                         <div className="col-md-6 padnone" key={d_k}>
                             <div className="cardDisp">
@@ -83,13 +108,10 @@ const ListDishes = () => {
 
                                     <div className="count">
                                         <div className="buttonView">
-                                            <div className="btnMinus">
+                                            <div className="btnMinus" onClick={() => { removeQty(dish.dish_id) }}>
                                                 <AiOutlineMinus  style={{ fontSize : '20px', margin : '5px'}} />
                                             </div>
                                             <div className="btnCount">
-                                                {qtyData.map(qty => 
-                                                    (qty.id === dish.dish_id) ?  count += qty.qty :  null
-                                                )}
                                                 { count }
                                             </div>
                                             <div className="btnAdd" onClick={() =>{ addQty(dish.dish_id) }} >
