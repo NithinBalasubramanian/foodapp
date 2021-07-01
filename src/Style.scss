@@ -190,7 +190,7 @@ h2{
             .cardImg{
                 width: 90%;
                 margin-top: 10px;
-                height: 60px;
+                height: 100px;
             }
         }
     }
@@ -251,4 +251,17 @@ h2{
             padding: 0px;
         }
     }
+ 
+ .cardDisp{
+  .cardColm3{
+            width : 25%;
+            height : 100%;
+
+            .cardImg{
+                width: 90%;
+                margin-top: 10px;
+                height: 60px;
+            }
+        }
+  }
 }
